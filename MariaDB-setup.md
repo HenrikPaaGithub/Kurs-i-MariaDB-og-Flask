@@ -1,4 +1,4 @@
-# MariaDB installasjon og oppstart (Homebrew)
+# MariaDB installasjon og oppstart i terminalen (med Homebrew)
 
 ## Installer Homebrew
 ```bash
