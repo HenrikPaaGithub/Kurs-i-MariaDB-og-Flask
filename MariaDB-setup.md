@@ -15,12 +15,14 @@ brew install mariadb
 mysql.server start
 ```
 
+## Start MariaDB som en tjeneste
+```bash
+brew service start mariadb
+```
+
 ## Kjør MariaDB som root
 ```bash
 sudo mariadb -u root
 ```
 
-## Start MariaDB som en tjeneste
-```bash
-brew service start mariadb
-```
+
