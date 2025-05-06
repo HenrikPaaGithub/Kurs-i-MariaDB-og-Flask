@@ -10,11 +10,6 @@
 brew install mariadb
 ```
 
-## Start MySQL-server (hvis nødvendig)
-```bash
-mysql.server start
-```
-
 ## Start MariaDB som en tjeneste
 ```bash
 brew service start mariadb
