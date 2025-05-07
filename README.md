@@ -20,7 +20,7 @@ brew service start mariadb
 sudo mariadb -u root
 ```
 
-# MariaDB installasjon og oppstart i terminalen (med Homebrew)
+# Oppretting av bruker
 ## Lage bruker
 ```bash
 CREATE USER 'brukernavn'@'localhost' IDENTIFIED BY 'passord';
@@ -28,5 +28,10 @@ CREATE USER 'brukernavn'@'localhost' IDENTIFIED BY 'passord';
 
 ## Gi tilgang
 ```bash
-GRANT ALL PRIVILEGES ON minapp.* TO 'brukernavn'@'localhost';
+GRANT ALL PRIVILEGES ON databasenavn.* TO 'brukernavn'@'localhost';
+```
+
+## "Refreshe" tilgang
+```bash
+FLUSH PRIVILEGES;
 ```
