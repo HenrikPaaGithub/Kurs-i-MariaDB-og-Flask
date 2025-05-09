@@ -68,17 +68,5 @@ def logout():
 def dashboard():
     return render_template('dashboard.html')
  
-@app.route('/register', methods=['GET', 'POST']) #Registrerer ny bruker
-def register():
-    form = RegisterForm()
- 
-    if form.validate_on_submit():
-        new_user = User(username=form.username.data, password=form.password.data) #lager ny bruker
-        db.session.add(new_user)
-        db.session.commit()
-        return redirect(url_for('login'))
- 
-    return render_template('register.html', form=form)
- 
 if __name__ == '__main__':
    app.run(debug=True)
