@@ -73,4 +73,6 @@ EXIT;
 ```
 
 # DEL 4: Instalasjon av Flask
-```pip install flask flask_sqlalchemy flask_login flask_bcrypt flask_wtf wtforms email_validator virtualenv flask pymysql```
+```bash
+pip install flask flask_sqlalchemy flask_login flask_bcrypt flask_wtf wtforms email_validator virtualenv flask pymysql
+```
