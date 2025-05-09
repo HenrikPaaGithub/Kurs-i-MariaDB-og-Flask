@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+ 
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+ 
+{% block body %}
+<h1>Det ser ut som du ikke er logget inn</h1>
+<a href="{{ url_for('login') }}">Log in</a>
+<br>
+<a href="{{ url_for('register') }}">Register</a>
+{% endblock %}
