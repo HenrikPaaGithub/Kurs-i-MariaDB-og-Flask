@@ -73,20 +73,24 @@ EXIT;
 ```
 
 # DEL 4: Instalasjon av Flask
-##Installer python med brew
+## Installer python med brew
 ```bash
 brew install python
 ```
 
 
-##Skjekk om python er installert?
+## Skjekk om python er installert?
 ```bash
 python3 --version
 pip3 --version
 ```
+## Hvis pip ikke funker
+```bash
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
+```
 
-
-##Installere flask fra terminal
+## Installere flask fra terminal
 ```bash
 pip install flask flask_sqlalchemy flask_login flask_bcrypt flask_wtf wtforms email_validator virtualenv flask pymysql
 ```
