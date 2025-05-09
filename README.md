@@ -26,6 +26,16 @@ sudo mariadb -u root
 CREATE USER "brukernavn"@"localhost" IDENTIFIED BY "passord";
 ```
 
+## Gi bruker tilgang til database
+```bash
+GRANT ALL PRIVILEGES ON *.* TO "brukernavn"@"localhost";
+```
+
+## "Refreshe" tilgang
+```bash
+FLUSH PRIVILEGES;
+```
+
 # DEL 3: Vanlige SQL-spørringer og kommandoer
 ## Lage database
 ```bash
@@ -35,16 +45,6 @@ CREATE DATABASE databasenavn;
 ## Vise alle databaser
 ```bash
 SHOW DATABASES;
-```
-
-## Gi bruker tilgang til database
-```bash
-GRANT ALL PRIVILEGES ON *.* TO "brukernavn"@"localhost";
-```
-
-## "Refreshe" tilgang
-```bash
-FLUSH PRIVILEGES;
 ```
 
 ## Lage tabell
