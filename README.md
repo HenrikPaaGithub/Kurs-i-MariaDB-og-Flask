@@ -39,7 +39,7 @@ SHOW DATABASES;
 
 ## Gi bruker tilgang til database
 ```bash
-GRANT ALL PRIVILEGES ON databasenavn.* TO 'brukernavn'@'localhost';
+GRANT ALL PRIVILEGES ON databasenavn*.* TO "brukernavn"@"localhost";
 ```
 
 ## "Refreshe" tilgang
