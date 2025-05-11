@@ -1,6 +1,6 @@
 # DEL 1: MariaDB installasjon og oppstart i terminalen (med Homebrew)
 
-## Installer Homebrew
+## Installer Homebrew (hvis du ikke har det enda)
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
