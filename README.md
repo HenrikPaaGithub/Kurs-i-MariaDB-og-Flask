@@ -15,7 +15,7 @@ brew install mariadb
 brew services start mariadb
 ```
 
-## Kjør MariaDB som root
+## Kjør MariaDB som root (bytt root med brukernavn etter vi lager det)
 ```bash
 mariadb -u root
 ```
