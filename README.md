@@ -31,7 +31,7 @@ CREATE USER "brukernavn"@"localhost" IDENTIFIED BY "passord";
 GRANT ALL PRIVILEGES ON *.* TO "brukernavn"@"localhost";
 ```
 
-## "Refreshe" tilgang
+## Lagre endringer
 ```bash
 FLUSH PRIVILEGES;
 ```
