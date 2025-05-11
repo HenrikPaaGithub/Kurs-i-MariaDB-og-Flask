@@ -9,7 +9,7 @@ from flask_bcrypt import Bcrypt, check_password_hash
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mariadb+pymysql://brukernavn:passord@127.0.0.1/flask_kurs1'
 app.config['SECRET_KEY'] = 'passord'
-# Create an instance of SQLAlchemy
+# Lager en variabel for SQLalchemy
 db = SQLAlchemy(app)
 
 #Gjør at flask og log inn kan sammarbeide
@@ -21,17 +21,13 @@ login_manager.login_view = 'login'
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
- 
+
+#Lager tabell i SQL
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), nullable=False, unique=True) #unique=True betyr at det ikke kan være to brukernavn som er like
     password = db.Column(db.String(150), nullable=False)
  
-
-    def validate_username(self, username):
-        existing_user_username = User.query.filter_by(username=username.data).first() #Skjekker om det er liknende brukernavn i databasen
-        if existing_user_username:
-            raise ValidationError('Brukernavn er tatt. Prøv en annen brukernavn')
         
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=150)], render_kw={"placeholder": "Username"}) #Setter inn brukernavn og krever at minst skal ha 3 karakterer
