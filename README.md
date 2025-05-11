@@ -92,7 +92,7 @@ python3 get-pip.py
 
 ## Installere flask fra terminal
 ```bash
-pip install flask flask_sqlalchemy flask_login flask_wtf wtforms flask_bcrypt pymysql
+pip install flask flask_sqlalchemy flask_login flask_wtf wtforms flask_bcrypt pymysql virtualenv
 ```
 
 ### Hvis feil!
