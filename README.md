@@ -89,6 +89,19 @@ pip3 --version
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 ```
+## Installere virtualenviroment
+```bash
+pip install virtualenv
+```
+
+## Installere virtualenviroment
+```bash
+virtualenv env
+```
+## Aktivere enviroment
+```bash
+source env/bin/activate
+```
 
 ## Installere flask fra terminal
 ```bash
