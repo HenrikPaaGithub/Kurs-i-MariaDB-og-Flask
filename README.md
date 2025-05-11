@@ -17,7 +17,7 @@ brew services start mariadb
 
 ## Kjør MariaDB som root
 ```bash
-sudo mariadb -u root
+mariadb -u root
 ```
 
 # DEL 2: Oppretting av bruker
@@ -65,6 +65,16 @@ INSERT INTO tabellnavn VALUES('verdi1', 'verdi2');
 ## Hente data fra tabellen
 ```bash
 SELECT * FROM tabellnavn;
+```
+
+## Slette all data fra tabellen
+```bash
+DELETE FROM tabellnavn;
+```
+
+## Slette tabellen
+```bash
+DROP TABLE tabellnavn;
 ```
 
 ## Gå ut av MariaDB
