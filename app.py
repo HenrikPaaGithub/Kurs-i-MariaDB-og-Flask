@@ -8,7 +8,7 @@ from flask_bcrypt import Bcrypt, check_password_hash
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mariadb+pymysql://brukernavn:passord@127.0.0.1/flask_kurs1'
-app.config['SECRET_KEY'] = 'passord'
+app.config['SECRET_KEY'] = 'passord' #Passordet til MariaDB
 # Lager en variabel for SQLalchemy
 db = SQLAlchemy(app)
 
