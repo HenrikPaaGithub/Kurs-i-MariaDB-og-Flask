@@ -190,6 +190,16 @@ if __name__ == '__main__':
    app.run(debug=True)
 
 ```
+#### Importere databasemodellen
+```bash
+1. python3
+
+2. from app import db
+
+3. db.create_all()
+```
+
+
 
 ### 2. Base.html
 ```bash
