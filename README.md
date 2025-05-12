@@ -125,7 +125,7 @@ pip install flask flask_sqlalchemy flask_login flask_bcrypt flask_wtf wtforms em
 
 # DEL 4: Live koding
 
-### 2. App.py
+### 1. App.py
 ```bash
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -189,4 +189,81 @@ def dashboard():
 if __name__ == '__main__':
    app.run(debug=True)
 
+```
+
+### 2. Base.html
+```bash
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    {% block body %}{% endblock %}
+</body>
+</html>
+```
+
+### 3. Index.html
+```bash
+{% extends 'base.html' %}
+ 
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+ 
+{% block body %}
+<h1>Det ser ut som du ikke er logget inn</h1>
+<a href="{{ url_for('login') }}">Log in</a>
+
+{% endblock %}
+```
+
+### 4. Login.html
+```bash
+{% extends 'base.html' %}
+ 
+{% block head %}
+<title>Log inn</title>
+{% endblock %}
+ 
+{% block body %}
+<div class="wrapper">
+<h1>Logg inn</h1>
+<div id="form">
+    <form method="post" action="">
+        {{ form.hidden_tag() }}
+    <div class="username"  id="email-input">
+        {{ form.username }}
+    </div>
+ 
+    <div class="password" id="password-input">
+        {{ form.password }}
+    </div>
+    
+    <div class="submit">
+        {{ form.submit }}
+    </div>
+    </div>
+    </form>
+</div>
+{% endblock %}
+ 
+```
+
+### 5. Dashboard.html
+```bash
+{% extends 'base.html' %}
+ 
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+ 
+{% block body %}
+<h1>Du er logget inn {{ current_user.username }}</h1>
+{% endblock %}
 ```
