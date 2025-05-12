@@ -199,6 +199,14 @@ if __name__ == '__main__':
 3. db.create_all()
 ```
 
+#### Hvis feil med pyhton3
+```bash
+1. flask shell
+
+2. from app import db
+
+3. db.create_all()
+```
 
 
 ### 2. Base.html
