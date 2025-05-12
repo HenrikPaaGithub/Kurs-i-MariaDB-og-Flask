@@ -124,38 +124,8 @@ pip install flask flask_sqlalchemy flask_login flask_bcrypt flask_wtf wtforms em
 ```
 
 
-### 1. Importere MySQL i flask
-```bash
-from flask import Flask, render_template, url_for, request, redirect
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import UserMixin, login_user, LoginManager, login_required, logout_user, current_user
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from flask_bcrypt import Bcrypt, check_password_hash
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mariadb+pymysql://brukernavn:passord@127.0.0.1/flask_kurs1'
-app.config['SECRET_KEY'] = 'passord'  #Passordet til MariaDB
-# Lager en variabel for SQLalchemy
-db = SQLAlchemy(app)
-
-
-#Lager tabell i SQL
-class User(db.Model, UserMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(150), nullable=False, unique=True) #unique=True betyr at det ikke kan være to brukernavn som er like
-    password = db.Column(db.String(150), nullable=False)
- 
-
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-if __name__ == '__main__':
-   app.run(debug=True)
-```
-### 2. app.py
+### 2. App.py
 ```bash
 from flask import Flask, render_template, url_for, request, redirect
 from flask_sqlalchemy import SQLAlchemy
