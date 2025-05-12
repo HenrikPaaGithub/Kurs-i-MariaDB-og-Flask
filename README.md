@@ -51,6 +51,11 @@ CREATE DATABASE databasenavn;
 SHOW DATABASES;
 ```
 
+## Bruke database
+```bash
+USE databasenavn;
+```
+
 ## Lage tabell
 ```bash
 CREATE TABLE tabellnavn(kolonne1 VARCHAR(255), kolonne2 INT);
